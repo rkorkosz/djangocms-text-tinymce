@@ -67,7 +67,7 @@ If you want to use the widget on your own model fields, you can! Just import the
 
 ::
 
-    from tinymce.fields import HTMLField
+    from tinymce.models import HTMLField
 
 And use it in your models, just like a TextField:
 
