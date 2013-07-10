@@ -33,7 +33,7 @@ Add a new setting to your settings.py called `TINYMCE_DEFAULT_CONFIG` with these
     TINYMCE_DEFAULT_CONFIG = {
         'height': 335,
         'theme': 'advanced',
-        'width': 730,
+        'width': 752,
     }
 
 It is a dict that holds all TinyMCE settings. For an overview of all the available settings have a look here:
