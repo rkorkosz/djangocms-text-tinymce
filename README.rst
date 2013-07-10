@@ -1,7 +1,7 @@
 djangocms-text-tinymce
 =======================
 
-Text Plugin for django-cms with CK-Editor
+Text Plugin for django-cms with TinyMCE, forked from djangocms-text-ckeditor. 
 
 .. WARNING::
    ``cms.plugins.text`` and ``djangocms-text-tinymce`` can't be used at the same time.
@@ -28,7 +28,7 @@ Upgrading from ``cms.plugins.text``
 Usage
 -----
 
-You can add a new setting to your settings.py called `TINYMCE_DEFAULT_CONFIG`:
+You can add a new setting to your settings.py called `TINYMCE_DEFAULT_CONFIG`::
 
     TINYMCE_DEFAULT_CONFIG = {
         'height': 335,
