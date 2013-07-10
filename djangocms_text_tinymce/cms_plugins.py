@@ -3,11 +3,10 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.forms.fields import CharField
 from django.utils.translation import ugettext_lazy as _
-# from djangocms_text_tinymce.widgets import TextEditorWidget
+from djangocms_text_tinymce.forms import TextForm
 from djangocms_text_tinymce.models import Text
 from djangocms_text_tinymce.utils import plugin_tags_to_user_html
-from djangocms_text_tinymce.forms import TextForm
-from tinymce.widgets import TinyMCE
+from djangocms_text_tinymce.widgets import TextEditorWidget
 
 class TextPlugin(CMSPluginBase):
     model = Text
@@ -21,7 +20,7 @@ class TextPlugin(CMSPluginBase):
         Returns the Django form Widget to be used for
         the text area
         """
-        return TinyMCE()
+        return TextEditorWidget()
 
     def get_form_class(self, request):
         """
