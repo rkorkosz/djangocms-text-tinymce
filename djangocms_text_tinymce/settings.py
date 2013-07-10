@@ -1,5 +1,7 @@
 from django.conf import settings
 
+# http:#wiki.moxiecode.com/index.php/TinyMCE:Configuration
+
 TINYMCE_DEFAULT_CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG', {
     'height': 335,
     'theme': 'advanced',
