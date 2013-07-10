@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from setuptools import setup
-from djangocms_text_ckeditor import __version__
+from djangocms_text_tinymce import __version__
 
 
 INSTALL_REQUIRES = [
     'html5lib',
+    'django-tinymce',
 ]
 
 CLASSIFIERS = [
@@ -25,13 +26,13 @@ CLASSIFIERS = [
 ]
 
 setup(
-    name='djangocms-text-ckeditor',
+    name='djangocms-text-tinymce',
     version=__version__,
-    description='Text Plugin for django CMS with CKEditor support',
-    author='Divio AG',
+    description='Text Plugin for django CMS with TinyMCE support',
+    author='Divio AG, Its Not Working',
     author_email='info@divio.ch',
-    url='https://github.com/divio/djangocms-text-ckeditor',
-    packages=['djangocms_text_ckeditor', 'djangocms_text_ckeditor.migrations'],
+    url='https://github.com/ItsNotWorking/djangocms-text-tinymce',
+    packages=['djangocms_text_tinymce', 'djangocms_text_tinymce.migrations'],
     install_requires=INSTALL_REQUIRES,
     license='LICENSE.txt',
     platforms=['OS Independent'],

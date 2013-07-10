@@ -11,7 +11,7 @@ INSTALLED_APPS = [
     'mptt',
     'cms',
     'menus',
-    'djangocms_text_ckeditor',
+    'djangocms_text_tinymce',
     'south',
 ]
 
@@ -50,7 +50,7 @@ def schemamigration():
     )
     argv = list(sys.argv)
     argv.insert(1, 'schemamigration')
-    argv.insert(2, 'djangocms_text_ckeditor')
+    argv.insert(2, 'djangocms_text_tinymce')
     utility = ManagementUtility(argv)
     utility.execute()
 
