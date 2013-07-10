@@ -28,13 +28,13 @@ Upgrading from ``cms.plugins.text``
 Usage
 -----
 
-You can add a new setting to your settings.py called `TINYMCE_DEFAULT_CONFIG`::
+Add a new setting to your settings.py called `TINYMCE_DEFAULT_CONFIG` with these base settings::
 
     TINYMCE_DEFAULT_CONFIG = {
         'height': 335,
         'theme': 'advanced',
         'width': 730,
-    })
+    }
 
 It is a dict that holds all TinyMCE settings. For an overview of all the available settings have a look here:
 
