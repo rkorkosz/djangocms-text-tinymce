@@ -1,0 +1,8 @@
+@charset "utf-8";
+/*
+ * @copyright:	https://github.com/divio/djangocms-text-ckeditor
+ */
+
+/* special case when inside a text plugin */
+.djangocms_text_tinymce-text .form-row { padding: 1px 2px; }
+.djangocms_text_tinymce-text .form-row label { display:none; }
