@@ -1,11 +1,12 @@
 from django.db import models
 from cms.models import CMSPlugin
 from django.utils.html import strip_tags
-from django.utils.text import truncate_words
 from django.utils.translation import ugettext_lazy as _
 from djangocms_text_tinymce.utils import plugin_tags_to_id_list, replace_plugin_tags
 from djangocms_text_tinymce.html import clean_html, extract_images
 from tinymce.models import HTMLField
+
+from .compat import truncate_words
 
 
 class Text(CMSPlugin):
