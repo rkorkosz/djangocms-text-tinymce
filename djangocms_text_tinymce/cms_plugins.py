@@ -1,6 +1,7 @@
 from cms import __version__ as cms_version
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
+from django.conf import settings
 from django.forms.fields import CharField
 from django.utils.translation import ugettext_lazy as _
 from djangocms_text_tinymce.forms import TextForm
@@ -20,7 +21,7 @@ class TextPlugin(CMSPluginBase):
         Returns the Django form Widget to be used for
         the text area
         """
-        return TextEditorWidget()
+        return TextEditorWidget(profile=settings.TINYMCE_ADMIN_CONFIG)
 
     def get_form_class(self, request):
         """
@@ -44,7 +45,7 @@ class TextPlugin(CMSPluginBase):
         form = self.get_form_class(request)
         kwargs['form'] = form  # override standard form
         return super(TextPlugin, self).get_form(request, obj, **kwargs)
-# 
+#
     def render_change_form(self, request, context, add=False, change=False, form_url='', obj=None):
         """
         We override the change form template path
