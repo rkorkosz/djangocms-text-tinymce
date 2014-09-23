@@ -61,7 +61,10 @@ def replace_plugin_tags(text, id_dict):
 
 
 def _plugin_dict(text, regex=OBJ_ADMIN_RE):
-    from cms.plugins.utils import downcast_plugins
+    try:
+        from cms.utils.plugins import downcast_plugins
+    except ImportError:
+        from cms.plugins.utils import downcast_plugins
     plugin_ids = plugin_tags_to_id_list(text, regex)
     plugin_list = downcast_plugins(CMSPlugin.objects.filter(pk__in=plugin_ids), select_placeholder=True)
     return dict((plugin.pk, plugin) for plugin in plugin_list)
